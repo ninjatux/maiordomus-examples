@@ -1,0 +1,12 @@
+{
+  "name": "maiordomus-wxample-app",
+  "description": "Example",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ninjatux/maiordomus-example-app.git"
+  },
+  "dependencies": {
+    "maiordomus": "git+ssh://git@bitbucket.org:ninjatux/maiordomus.git"
+  }
+}
