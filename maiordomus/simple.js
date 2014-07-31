@@ -11,21 +11,22 @@ function flowChanger() {
     FLOW_CONTROL++;
 
     maiordomus
+        .log('My log')
         .done('FLOW_CONTROL = ' + FLOW_CONTROL);
 }
 
 alfred
     .step(
-        'TwoTimes',
+        'Step 1',
         'Executes 2 steps',
         [ flowChanger, flowChanger ]
     )
     .step(
-        'OneTime',
+        'Step 2',
         'Executes 1 step',
         [ flowChanger ]
     ).step(
-        'FourTimes',
+        'Step 3',
         'Executes 4 steps',
         [ flowChanger, flowChanger, flowChanger, flowChanger ]
     );

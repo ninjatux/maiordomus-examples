@@ -1,0 +1,10 @@
+{
+  "libs": [
+    "chai",
+    "ecma5",
+    "underscore"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}
