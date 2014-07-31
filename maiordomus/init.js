@@ -4,13 +4,13 @@ var geoffrey = require('maiordomus');
 geoffrey
     .step(
         'CreateDirectories',
-        'Creates the needed directories for running the app',
-        [ createDirectories, deploy ]
+        [ createDirectories ],
+        'Creates the needed directories for running the app'
     )
     .step(
         'DeployApplication',
-        'Init the git repository',
-        [ deploy ]
+        [ deploy ],
+        'Init the git repository'
     );
 
 /* custom */
@@ -18,10 +18,9 @@ function createDirectories() {
     var maiordomus = this;
     maiordomus
         .sshConnect('SSH session created')
-        .sshSend('mkdirp ~/sites/logs')
+        .sshSend('mkdir -p ~/sites/logs')
         .sshSend('echo "Log folder created" >> ~/sites/logs/check')
         .sshSend('cat ~/sites/logs/check')
-        .sshSend('service name restart')
         .done();
 }
 

@@ -18,17 +18,17 @@ function flowChanger() {
 alfred
     .step(
         'Step 1',
-        'Executes 2 steps',
-        [ flowChanger, flowChanger ]
+        [ flowChanger, flowChanger ],
+        'Executes 2 steps'
     )
     .step(
         'Step 2',
-        'Executes 1 step',
-        [ flowChanger ]
+        [ flowChanger ],
+        'Executes 1 step'
     ).step(
         'Step 3',
-        'Executes 4 steps',
-        [ flowChanger, flowChanger, flowChanger, flowChanger ]
+        [ flowChanger, flowChanger, flowChanger, flowChanger ],
+        'Executes 4 steps'
     );
 
 /* export */
