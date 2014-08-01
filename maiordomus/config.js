@@ -1,13 +1,13 @@
 
 /* MaiorDomus configuration */
 module.exports = {
+    logsFolder: 'logs',
     environments: {
         production: {
             host: ['127.0.0.1', '127.0.0.1'],
             port: 22,
-            username: 'username',
-            privateKey: require('fs').readFileSync('path/to/key'),
-            dstFolder: '~/sites/myapp-production'
+            username: 'valerio.barrila',
+            privateKey: require('fs').readFileSync('/path/to/key')
         }
     }
 };
