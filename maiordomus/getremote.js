@@ -12,9 +12,9 @@ function getFile() {
     var maiordomus = this;
 
     maiordomus
-        .connect('SSH session created')
+        .connect('Creating SSH sessions')
             .exec('echo "i was created using an SSH connection!" > ~/sites/remoteFile')
-            .get('/Users/valerio.barrila/Downloads/GoBootcamp.mobi', '/Users/valerio.barrila/GoBootcamp.mobi', 'Retrieving remote file')
+            .get('/Users/valerio.barrila/Downloads/GoBootcamp.moi', '/Users/valerio.barrila/GoBootcamp.mobi', 'Retrieving remote file')
         .disconnect()
         .done();
 }
