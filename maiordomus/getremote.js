@@ -13,9 +13,8 @@ function getFile() {
 
     maiordomus
         .connect('Creating SSH sessions')
-            .exec('echo "i was created using an SSH connection!" > ~/sites/remoteFile')
-            .get('/Users/valerio.barrila/Downloads/GoBootcamp.moi', '/Users/valerio.barrila/GoBootcamp.mobi', 'Retrieving remote file')
-        .disconnect()
+            .get('<%= getRemoteFilePath %>', '<%= getLocalFilePath %>', 'Retrieving remote file')
+        .disconnect() //this is not necessary since on 'done' Maiordomus will close all the connections
         .done();
 }
 

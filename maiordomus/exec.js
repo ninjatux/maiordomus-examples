@@ -13,9 +13,9 @@ function createDirectories() {
 
     maiordomus
         .connect('SSH session created')
-            .exec('mkdir -p ~/sites/sshcreated')
+            .exec('mkdir -p ~/sshcreated', 'Executing remote command')
         .disconnect()
-        .exec('mkdir -p ~/sites/localcreated')
+        .exec('mkdir -p ~/localcreated', 'Executing local command')
         .done();
 }
 

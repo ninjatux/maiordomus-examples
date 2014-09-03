@@ -13,8 +13,8 @@ function putFile() {
 
     maiordomus
         .connect('Creating SSH sessions')
-            .put('/Users/valerio.barrila/Downloads/GoBootcamp.moBi', '/Users/valerio.barrila/GoBootcamp.mobi', 'Uploading remote file')
-        .disconnect()
+            .put('<%= putLocalFilePath %>', '<%= putRemoteFilePath %>', 'Uploading remote file')
+        .disconnect() //this is not necessary since on 'done' Maiordomus will close all the connections
         .done();
 }
 
